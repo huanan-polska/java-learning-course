@@ -43,23 +43,19 @@ public class Car {
         System.out.println("Pojazd marki " + this.manufacturer + ", model: " + this.model + ", posiada masę: " + this.weight + " kg.");
     }
 
+    //poniżej metoda creatCarFromUserInput(); pozwalająca na odbior danych od usera na temat nowego pojazdu (nowego obiektu Car)
     public void createCarFromUserInput(String manufacturer, String model, int weight){
 
         Scanner CarAttribute = new Scanner(System.in);
 
         System.out.print("Podaj nazwę producenta pojazdu: ");
         this.manufacturer = CarAttribute.next();
-        //setManufacturer(this.manufacturer);
 
         System.out.print("Podaj dokładne oznaczenie modelu: ");
         this.model = CarAttribute.next();
-        //setModel(this.model);
 
         System.out.print("Wpisz masę pojazdu (w kg, ale nie dodawaj oznaczenia jednostek): ");
         this.weight = CarAttribute.nextInt();
-        //setWeight(this.weight);
-        //System.out.println("Pojazd marki " + manufacturer + ", model: " + model + ", posiada masę: " + weight + " kg.");
-
     }
 }
 
