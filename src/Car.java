@@ -19,22 +19,25 @@ public class Car {
     public int getWeight() {                        // metoda typu getXXX(); zwracająca masę pojazdu (cechę/atrybut)
         return weight;
     }
-    public void setWeight(int weight) {             // metoda typu setXXX(); umożliwiająca zmianę
+    public int setWeight(int weight) {             // metoda typu setXXX(); umożliwiająca zmianę
         this.weight = weight;                       // masy pojazdu (zamiana cechy/atrybutu)
-        }
+        return weight;
+    }
 
     public String getManufacturer() {
         return manufacturer;
         }
-    public void setManufacturer(String manufacturer) {
+    public String setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-        }
+        return manufacturer;
+    }
 
     public String getModel() {
         return model;
         }
-    public void setModel(String model) {
+    public String setModel(String model) {
         this.model = model;
+        return model;
     }
 
     // poniżej metoda print(arg(1),(arg(2),arg(3)) przygotowująca output w postaci
@@ -49,13 +52,17 @@ public class Car {
         Scanner CarAttribute = new Scanner(System.in);
 
         System.out.print("Podaj nazwę producenta pojazdu: ");
-        this.manufacturer = CarAttribute.next();
+        manufacturer = CarAttribute.next();
+        setManufacturer(manufacturer);
 
         System.out.print("Podaj dokładne oznaczenie modelu: ");
-        this.model = CarAttribute.next();
+        model = CarAttribute.next();
+        setModel(model);
 
         System.out.print("Wpisz masę pojazdu (w kg, ale nie dodawaj oznaczenia jednostek): ");
-        this.weight = CarAttribute.nextInt();
+        weight = CarAttribute.nextInt();
+        setWeight(weight);
+
     }
 }
 

@@ -53,7 +53,7 @@ class Main {
 
         Car CarTemp = new Car("aaa","bbb",111); // deklaracja obiektu CarTemp stanowiąca "bufor" na przyjęcie danych od usera
 
-        CarTemp.createCarFromUserInput(CarTemp.manufacturer, CarTemp.model, CarTemp.weight);    // wywolanie metody Car.creatCarFromUserInput();
+        CarTemp.createCarFromUserInput(CarTemp.manufacturer,CarTemp.model,CarTemp.weight);    // wywolanie metody Car.creatCarFromUserInput();
         CarTemp.print(CarTemp.getManufacturer(), CarTemp.getModel(), CarTemp.getWeight());      // wywolanie metody Car.print();
 
         System.out.print("\nPOZDRAWIAM!");
